@@ -2,52 +2,44 @@ import React from "react";
 import { StyledProducts } from "./StyledProducts";
 import Product from "../../components/Product";
 import SideBar from "../../components/SideBar";
-const Products = ({ color }) => {
+const Products = ({ color, hello, empty }) => {
   const arrayProducts = [
     {
-      img: "",
       title: "Título del producto",
       brand: "Marca",
       price: "12.345,00",
     },
     {
-      img: "",
       title: "Título del producto",
       brand: "Marca",
       price: "12.345,00",
     },
     {
-      img: "",
       title: "Título del producto",
       brand: "Marca",
       price: "12.345,00",
     },
     {
-      img: "",
       title: "Título del producto",
       brand: "Marca",
       price: "12.345,00",
     },
     {
-      img: "",
       title: "Título del producto",
       brand: "Marca",
       price: "12.345,00",
     },
     {
-      img: "",
       title: "Título del producto",
       brand: "Marca",
       price: "12.345,00",
     },
     {
-      img: "",
       title: "Título del producto",
       brand: "Marca",
       price: "12.345,00",
     },
     {
-      img: "",
       title: "Título del producto",
       brand: "Marca",
       price: "12.345,00",
@@ -56,9 +48,9 @@ const Products = ({ color }) => {
 
   return (
       <StyledProducts>
-      <SideBar color={color} />
+      <SideBar color={color} hello={hello}/>
       <div className="container">
-        {arrayProducts.map((p) => (
+        {empty ? null : arrayProducts.map((p) => (
           <Product
             img={p.img}
             title={p.title}

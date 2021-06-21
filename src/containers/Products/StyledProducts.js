@@ -9,4 +9,11 @@ export const StyledProducts = styled.div`
     flex-wrap: wrap;
     margin: 0 1rem;
   }
+  @media (max-width: 703px) {
+    .container {
+    justify-content: center;
+      width: 100%;
+      margin: 0;
+    }
+  }
 `;

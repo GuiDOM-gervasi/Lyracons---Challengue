@@ -3,7 +3,7 @@ import { StyledNav } from "./StyledNav";
 import logo from "./img/logo_lyracons.png";
 import { black, orange } from "../../containers/App/GlobalStyles";
 
-const Nav = ({ setColor }) => {
+const Nav = ({ setColor, setHello, setEmpty }) => {
   const [active, setActive] = useState(false)
   const handleColor = (e) => {
     e.type === "mouseenter" ? setColor(black) : setColor(orange);
@@ -14,6 +14,14 @@ const Nav = ({ setColor }) => {
    console.log(active)
   }
 
+  const handleHello = () => {
+    setHello(true)
+  }
+
+  const handleEmpty = () =>{
+    setEmpty(true)
+  }
+
   return (
     <StyledNav active={active}>
       <i className="fas fa-bars" onClick={handleMenu}></i>
@@ -21,13 +29,13 @@ const Nav = ({ setColor }) => {
       <ul className="menu">
         <li className="menuItem1">
           MENU ITEM 1
-          <ul className="subMenu active">
-            <li>Submenu Item 1</li>
-            <li>Submenu Item 2</li>
-            <li>Submenu Item 3</li>
+          <ul className="subMenu">
+            <li className="subli">Submenu Item 1</li>
+            <li className="subli">Submenu Item 2</li>
+            <li className="subli">Submenu Item 3</li>
           </ul>
         </li>
-        <li>MENU ITEM 2</li>
+        <li onClick={handleEmpty}>MENU ITEM 2</li>
         <li
           className="menuItem3"
           onMouseEnter={(e) => handleColor(e)}
@@ -35,7 +43,7 @@ const Nav = ({ setColor }) => {
         >
           MENU ITEM 3
         </li>
-        <li>MENU ITEM 4</li>
+        <li onClick={handleHello}>MENU ITEM 4</li>
       </ul>
     </StyledNav>
   );

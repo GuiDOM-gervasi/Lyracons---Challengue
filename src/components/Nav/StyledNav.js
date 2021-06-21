@@ -22,17 +22,19 @@ export const StyledNav = styled.nav`
     li {
       width: 6.5rem;
       height: 100%;
+      padding-top: 15px;
       list-style: none;
       font-weight: 600;
-      padding: 15px 0;
+      cursor: pointer;
     }
     .menuItem1 {
       .subMenu {
         display: none;
-        margin-top: 1rem;
         background-color: ${grey};
-        li {
+        top: 3.1rem;
+        .subli {
           font-size: 14px;
+          margin: auto;
           padding: 0.3rem 0.1rem;
           border-bottom: solid 1px ${white};
           &:hover {
@@ -47,7 +49,7 @@ export const StyledNav = styled.nav`
     }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 703px) {
     display: flex;
     justify-content: center;
     height: 4.3rem;
@@ -65,15 +67,25 @@ export const StyledNav = styled.nav`
       height: 2rem;
     }
     .menu {
+      width: 100vw;
       position: absolute;
       display: flex;
       flex-direction: column;
       display: ${({ active }) => (active ? "flex" : "none")};
       left: 0;
-      margin: 6.3rem 2.2rem;
+      margin: 4.3rem 0;
+      padding: 2rem 0;
+      background-color: ${white};
+      .menuItem1 {
+        .subMenu {
+        }
+        &:hover > ul {
+          display: none;
+        }
+      }
       li {
         padding: 0;
-        margin-bottom: 3rem;
+        margin: 0 0 3rem 2.2rem;
       }
     }
   }

@@ -40,5 +40,10 @@ export const StyledProduct = styled.div`
     background-color: ${grey};
     border: none;
     font-weight: 600;
+    cursor:pointer;
+    &:hover{
+      background-color: ${black};
+      color: ${lightgrey}
+    }
   }
 `;
