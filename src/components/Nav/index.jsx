@@ -4,23 +4,23 @@ import logo from "./img/logo_lyracons.png";
 import { black, orange } from "../../containers/App/GlobalStyles";
 
 const Nav = ({ setColor, setHello, setEmpty }) => {
-  const [active, setActive] = useState(false)
+  const [active, setActive] = useState(false);
   const handleColor = (e) => {
     e.type === "mouseenter" ? setColor(black) : setColor(orange);
   };
 
   const handleMenu = () => {
-   active ? setActive(false) : setActive(true)
-   console.log(active)
-  }
+    active ? setActive(false) : setActive(true);
+    console.log(active);
+  };
 
   const handleHello = () => {
-    setHello(true)
-  }
+    setHello(true);
+  };
 
-  const handleEmpty = () =>{
-    setEmpty(true)
-  }
+  const handleEmpty = () => {
+    setEmpty(true);
+  };
 
   return (
     <StyledNav active={active}>

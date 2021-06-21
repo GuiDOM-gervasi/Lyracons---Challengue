@@ -47,19 +47,21 @@ const Products = ({ color, hello, empty }) => {
   ];
 
   return (
-      <StyledProducts>
-      <SideBar color={color} hello={hello}/>
+    <StyledProducts>
+      <SideBar color={color} hello={hello} />
       <div className="container">
-        {empty ? null : arrayProducts.map((p) => (
-          <Product
-            img={p.img}
-            title={p.title}
-            brand={p.brand}
-            price={p.price}
-          />
-        ))}
+        {empty
+          ? null
+          : arrayProducts.map((p) => (
+              <Product
+                img={p.img}
+                title={p.title}
+                brand={p.brand}
+                price={p.price}
+              />
+            ))}
       </div>
-      </StyledProducts>
+    </StyledProducts>
   );
 };
 

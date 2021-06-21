@@ -11,7 +11,7 @@ export const StyledProducts = styled.div`
   }
   @media (max-width: 703px) {
     .container {
-    justify-content: center;
+      justify-content: center;
       width: 100%;
       margin: 0;
     }
